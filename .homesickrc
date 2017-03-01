@@ -6,7 +6,7 @@ token = ask("github personal access token:)
 
 `git config --global user.name #{name}`
 `git config --global user.email #{email}`
-append_to_file(File.expand_path("~/.netrc")) do
+append_to_file(File.absolute_path("~/.netrc")) do
 <<-NETRC
 machine github.com
 login #{user}
