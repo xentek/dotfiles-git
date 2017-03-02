@@ -28,3 +28,6 @@
 	default = current
 [core]
 	excludesfile = $HOME/.gitignore
+[user]
+	name = Eric
+	email = eric.marden@gmail.com
