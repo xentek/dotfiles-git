@@ -1,33 +1,49 @@
 [alias]
-	pr = pull-request
-	sp = smart-pull
-	commit = ci
-	ci = commit
-	co = checkout
-	st = status
-	info = status
-	svn-diff = !git-svn-diff
-	l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-	lol = log --pretty=oneline --abbrev-commit --graph --decorate
-	unstage = reset HEAD
-	staged = diff --cached
-	unstaged = diff
-	current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+    cpr = pull-request
+    sp = smart-pull
+    commit = ci
+    ci = commit
+    co = checkout
+    st = status
+    info = status
+    svn-diff = !git-svn-diff
+    l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+    lol = log --pretty=oneline --abbrev-commit --graph --decorate
+    unstage = reset HEAD
+    staged = diff --cached
+    unstaged = diff
+    current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
 [apply]
-	whitespace = warn
+    whitespace = warn
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
 [help]
-	autocorrect = 1
+    autocorrect = 1
 [status]
-	submodule = 1
+    submodule = 1
 [push]
-	default = current
+    default = current
 [core]
-	excludesfile = $HOME/.gitignore
+    excludesfile = /Users/xentek/.gitignore
+    editor = vim
+    whitespace = trailing-space,space-before-tab
 [user]
-	name = Eric
-	email = eric.marden@gmail.com
+    name = Eric Marden
+    email = eric.marden@gmail.com
+    signingkey = 76747D68A3FD198A285C10962F3784334AEC316E
+[github]
+    user = xentek
+[credential]
+    helper = osxkeychain
+[gpg]
+    program = gpg
+[commit]
+    gpgsign = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

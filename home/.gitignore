@@ -3,3 +3,4 @@
 .svn
 Thumbs.db
 Thumbs.db.encrypted
+*.pyc
