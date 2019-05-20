@@ -27,7 +27,7 @@
 [push]
     default = current
 [core]
-    excludesfile = /Users/xentek/.gitignore
+	excludesfile = /Users/xentek/.gitignore
     editor = vim
     whitespace = trailing-space,space-before-tab
 [user]
