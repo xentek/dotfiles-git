@@ -31,9 +31,11 @@
     editor = vim
     whitespace = trailing-space,space-before-tab
 [user]
-    name = Eric Marden
+    name = Eric Marden (xentek)
     email = eric.marden@gmail.com
-    signingkey = 76747D68A3FD198A285C10962F3784334AEC316E
+		signingkey = 2F3784334AEC316E
+[includeIf "gitdir:~/Dropbox/code/f5/"]
+		path = ~/.f5-gitconfig
 [github]
     user = xentek
 [credential]
@@ -47,3 +49,7 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
