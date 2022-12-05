@@ -27,7 +27,7 @@
 [push]
     default = current
 [core]
-    excludesfile = /Users/xentek/.gitignore
+	excludesfile = /home/xentek/.gitignore
     editor = vim
     whitespace = trailing-space,space-before-tab
 [user]
@@ -35,6 +35,8 @@
     email = eric.marden@gmail.com
     signingkey = 2F3784334AEC316E
 [includeIf "gitdir:~/code/f5/"]
+		path = ~/.f5-gitconfig
+[includeIf "gitdir:~/.f5/"]
 		path = ~/.f5-gitconfig
 [github]
     user = xentek

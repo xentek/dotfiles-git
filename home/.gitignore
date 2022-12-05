@@ -347,8 +347,12 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,go,rust,vim,emacs,visualstudiocode,c++,windows,macos,linux,dotenv
+.env
 .env.*
 bin/*
+.envrc
+.vscode
+coverage.txt
 
 # must be last
 !.gitkeep
