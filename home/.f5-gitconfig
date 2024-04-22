@@ -1,7 +1,11 @@
 [user]
-name = "Eric Marden"
-email = eric.marden@fathom5.co
-signingkey = 85BA70E24223B6A4
+  name = "Eric Marden"
+  email = eric.marden@fathom5.com
+  signingkey = DC3087E51A6D48FA
 
 [credential]
-helper = !/home/xentek/bin/glab auth git-credential
+  helper = /usr/local/bin/git-credential-manager
+  credentialStore = gpg
+
+[github]
+    user = f5-ericmarden

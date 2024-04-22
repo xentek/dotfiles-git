@@ -1,52 +1,70 @@
 [alias]
-    cpr = pull-request
-    sp = smart-pull
-    commit = ci
-    ci = commit
-    co = checkout
-    st = status
-    info = status
-    svn-diff = !git-svn-diff
-    l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-    lol = log --pretty=oneline --abbrev-commit --graph --decorate
-    unstage = reset HEAD
-    staged = diff --cached
-    unstaged = diff
-    current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+  cpr = pull-request
+  sp = smart-pull
+  commit = ci
+  ci = commit
+  co = checkout
+  st = status
+  info = status
+  svn-diff = !git-svn-diff
+  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  unstage = reset HEAD
+  staged = diff --cached
+  unstaged = diff
+  current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+
 [apply]
-    whitespace = warn
+  whitespace = warn
+
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    ui = true
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+
 [help]
-    autocorrect = 1
+  autocorrect = 1
+
 [status]
-    submodule = 1
+  submodule = 1
+
 [push]
-    default = current
+  default = current
+
 [core]
-	excludesfile = /home/xentek/.gitignore
-    editor = vim
-    whitespace = trailing-space,space-before-tab
-[user]
-    name = Eric Marden (xentek)
-    email = eric.marden@gmail.com
-    signingkey = 2F3784334AEC316E
+  excludesfile = /home/xentek/.gitignore
+  editor = vim
+  whitespace = trailing-space,space-before-tab
+
+[includeif "gitdir:~/code/xentek/"]
+  path = ~/.xentek-gitconfig
+
+[includeif "gitdir:~/.homesick/repos/"]
+  path = ~/.xentek-gitconfig
+
 [includeIf "gitdir:~/code/f5/"]
-		path = ~/.f5-gitconfig
+  path = ~/.f5-gitconfig
+
 [includeIf "gitdir:~/.f5/"]
-		path = ~/.f5-gitconfig
-[github]
-    user = xentek
+  path = ~/.f5-gitconfig
+
 [credential]
-    helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+  #helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+  credentialStore = gpg
+  helper = /usr/local/bin/git-credential-manager
+
+[credential "https://dev.azure.com"]
+  useHttpPath = true
+
 [gpg]
-    program = gpg
+  program = gpg
+
 [commit]
-    gpgsign = true
+  gpgsign = true
+
 [init]
-	defaultBranch = main
+  defaultBranch = main
+
 [pull]
-	rebase = false
+  rebase = false
