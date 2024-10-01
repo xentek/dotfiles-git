@@ -1,0 +1,14 @@
+[user]
+  name = "Eric Marden"
+  email = eric.marden@gmail.com
+  signingkey = 2F3784334AEC316E
+
+[credential]
+  credentialStore = secretservice
+  helper = git-credential-manager
+
+[github]
+    user = xentek
+
+[credential "https://github.com"]
+  username = xentek

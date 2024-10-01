@@ -13,6 +13,7 @@
   staged = diff --cached
   unstaged = diff
   current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+  tag = tag -as
 
 [apply]
   whitespace = warn
@@ -50,9 +51,8 @@
   path = ~/.f5-gitconfig
 
 [credential]
-  #helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
-  credentialStore = gpg
-  helper = /usr/local/bin/git-credential-manager
+	credentialStore = secretservice
+  helper = git-credential-manager
 
 [credential "https://dev.azure.com"]
   useHttpPath = true
@@ -68,3 +68,9 @@
 
 [pull]
   rebase = false
+
+[credential "https://github.com"]
+  username = f5-ericmarden
+
+[credential "https://gitlab.erm.fathom5.work"]
+  username = eric.marden
