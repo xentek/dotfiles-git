@@ -37,22 +37,13 @@
   excludesfile = /home/xentek/.gitignore
   editor = vim
   whitespace = trailing-space,space-before-tab
-
-[includeif "gitdir:~/code/xentek/"]
-  path = ~/.xentek-gitconfig
-
-[includeif "gitdir:~/.homesick/repos/"]
-  path = ~/.xentek-gitconfig
-
-[includeIf "gitdir:~/code/f5/"]
-  path = ~/.f5-gitconfig
-
-[includeIf "gitdir:~/.f5/"]
-  path = ~/.f5-gitconfig
+  trustctime = false
 
 [credential]
-	credentialStore = secretservice
+  credentialStore = secretservice
   helper = git-credential-manager
+	helper = 
+	helper = /usr/local/bin/git-credential-manager
 
 [credential "https://dev.azure.com"]
   useHttpPath = true
@@ -67,10 +58,15 @@
   defaultBranch = main
 
 [pull]
-  rebase = false
+	rebase = false
+
+[user]
+  name = "Eric Marden"
+  email = eric.marden@gmail.com
+  signingkey = 2F3784334AEC316E
+
+[github]
+    user = xentek
 
 [credential "https://github.com"]
-  username = f5-ericmarden
-
-[credential "https://gitlab.erm.fathom5.work"]
-  username = eric.marden
+  username = xentek

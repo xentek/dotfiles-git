@@ -22,6 +22,7 @@
 *.dll
 
 # Fortran module files
+*.mod
 *.smod
 
 # Compiled Static libraries
@@ -34,7 +35,6 @@
 *.exe
 *.out
 *.app
-!kitty.app
 
 ### dotenv ###
 .env
@@ -349,6 +349,14 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/node,go,rust,vim,emacs,visualstudiocode,c++,windows,macos,linux,dotenv
 .env.*
 bin/*
+
+zig-cache/
+zig-out/
+/release/
+/debug/
+/build/
+/build-*/
+/docgen_tmp/
 
 # must be last
 !.gitkeep
